@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue';
 
-defineProps({
-  greetingMessage: String,
-})
+// defineProps({
+//   greetingMessage: String,
+// })
 
 const id = ref(1);
 const url = ref('https://youtube.com');
@@ -17,7 +17,8 @@ const inputHeight = ref(40);
 </script>
 
 <template>
-    <div :id="`list-${id}`">{{ greetingMessage }}</div>
+  <div class="card">
+    <div :id="`list-${id}`"></div>
     <button :disabled="isButtonDisabled">Button</button>
     <a :href="url"> link youtube</a>
     <div>
@@ -40,6 +41,7 @@ const inputHeight = ref(40);
         <input v-model="inputHeight"/>
     </div>
     <img :src="imgUrl" :width="inputWidth" :height="inputHeight"/>
+  </div>
 </template>
 
 <style scoped>

@@ -15,15 +15,27 @@
 </script>
 
 <template>
-  <div>
+  <div class="card">
     <div>     
       <label for="firstName">Nama Depan : </label>
-      <input v-model="firstName" @input="loadData"/>
+      <!-- <input v-model="firstName" @input="loadData"/> -->
+      
+      <input v-model="firstName"/>
+
     </div>
     <div>
       <label for="lastName">Nama Belakang : </label>
-      <input v-model="lastName" @input="loadData"/>
+      <!-- <input v-model="lastName" @input="loadData"/> -->
+
+      <input v-model="lastName"/>
+
     </div>
+      <div v-if="fullName.length > 1">
+            <p>Halo nama saya : {{ fullName }}</p>
+        </div>
+        <div v-else>
+            <p>Silahkan isi nama anda</p>
+        </div>
   </div>
 </template>
 

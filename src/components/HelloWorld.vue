@@ -7,10 +7,8 @@ export default {
     const msg = ref('Hello World');
     const count = ref(0);
 
-    function increment() {
-      count.value++;
-      //To define an event in a Vue component, you can use the emit function
-      emit('increment', count.value);
+    const increment = () => {
+      return count.value++;
     }
 
     const numbers = ref([1, 2, 3, 4, 5]);

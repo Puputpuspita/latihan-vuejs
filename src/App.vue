@@ -17,7 +17,17 @@ const message = ref('Selamat datang');
 </script>
 
 <template>
-  <InputName @displayData="fetchData($event)"/>
+  <div class="container">
+    <nav>
+      <RouterLink to="/">Home | </RouterLink>
+      <RouterLink to="/hello">Hello | </RouterLink>
+      <RouterLink to="/exercise">Exercise</RouterLink>
+    </nav>
+    <div>
+      <RouterView></RouterView>
+    </div>
+  </div>
+  <!-- <InputName @displayData="fetchData($event)"/> -->
 
   <!-- <div v-if="fullName.length > 1">
     <p>Halo nama saya : {{ fullName }}</p>
@@ -26,7 +36,7 @@ const message = ref('Selamat datang');
     <p>Silahkan isi nama anda</p>
   </div> -->
 
-  <Display :fullName="fullName"/>
+  <!-- <Display :fullName="fullName"/> -->
 
   <!-- <Exercise :greetingMessage="message"/> -->
 </template>
