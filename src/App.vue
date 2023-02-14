@@ -1,44 +1,18 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
-import InputName from './components/InputName.vue';
-import Display from './components/Display.vue';
-import Exercise from './components/Exercise.vue';
-import { ref } from 'vue'
 
-
-const fullName = ref('');
-const fetchData = (event) => {
-  fullName.value = event;
-}
-
-const message = ref('Selamat datang');
-
-//  <InputName @input="fullName = $event"/>
 </script>
 
 <template>
   <div class="container">
     <nav>
       <RouterLink to="/">Home | </RouterLink>
-      <RouterLink to="/hello">Hello | </RouterLink>
-      <RouterLink to="/exercise">Exercise</RouterLink>
+      <RouterLink to="/about">About | </RouterLink>
+      <RouterLink to="/contactus">Contact Us</RouterLink>
     </nav>
     <div>
       <RouterView></RouterView>
     </div>
   </div>
-  <!-- <InputName @displayData="fetchData($event)"/> -->
-
-  <!-- <div v-if="fullName.length > 1">
-    <p>Halo nama saya : {{ fullName }}</p>
-  </div>
-  <div v-else>
-    <p>Silahkan isi nama anda</p>
-  </div> -->
-
-  <!-- <Display :fullName="fullName"/> -->
-
-  <!-- <Exercise :greetingMessage="message"/> -->
 </template>
 
 <style scoped>
