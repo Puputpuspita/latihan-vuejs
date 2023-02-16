@@ -12,6 +12,6 @@
     }
 
     const addLikeAsync = () => {
-        store.post.dispatch('post/incrementAsync', 1);
+        store.dispatch('post/incrementAsync', 1);
     }
 </script>
