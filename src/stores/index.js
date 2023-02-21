@@ -1,10 +1,10 @@
 import { createStore } from "vuex";
 import post from "./modules/post";
-import product from "./modules/product";
+import user from "./modules/user";
 
 export default createStore({
   modules: {
     post,
-    product,
+    user,
   },
 });

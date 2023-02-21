@@ -1,13 +1,10 @@
 <script setup>
-
 </script>
 
 <template>
   <div class="container">
     <nav>
-      <RouterLink to="/">Home | </RouterLink>
-      <RouterLink to="/about">About | </RouterLink>
-      <RouterLink to="/contactus">Contact Us</RouterLink>
+      <!-- <RouterLink to="/">Home</RouterLink> -->
     </nav>
     <div>
       <RouterView></RouterView>

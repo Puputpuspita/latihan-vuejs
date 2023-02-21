@@ -1,18 +1,18 @@
 export default {
-    namespaced: true,
-    state: {
-        count: 0,
-    },
-    mutations: {
-        increment(state, payload) {
-          state.count += payload;
-        },
-    },
-    actions: {
-        incrementAsync({ commit }, payload) {
-          setTimeout(() => {
-            commit('increment', payload);
-          }, 1000);
-        },
-    },
+  namespaced: true,
+  state : JSON.parse(localStorage.getItem('posts')) || {
+      posts: [],
+  },
+  getters: {
+      getPosts: state => {
+         state = JSON.parse(localStorage.getItem('posts'));
+         return state?.posts || [];
+      }
+  },
+  mutations: {
+      addPost(state, {username, detail, date}) {
+          state.posts.push({username: username, detail: detail, date: new Date()});
+          localStorage.setItem('posts', JSON.stringify(state));
+      },
+  },
 }
